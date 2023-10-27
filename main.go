@@ -14,7 +14,7 @@ func Welcome(c *fiber.Ctx) error {
 }
 // func setupRoutes( app *fiber.App){
 // 	app.Get("/api",Welcome)
-// 	// User endpoints
+	// User endpoints
 // 	app.Post("/api/users",routes.CretaeUser)
 // }
 
