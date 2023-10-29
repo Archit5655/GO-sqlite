@@ -28,6 +28,7 @@ func ConnectDB() {
 	log.Println("running mIgrartions")
 	//  Add migrations
 	db.AutoMigrate(&models.User{}, &models.Products{}, &models.Orders{})
+	
 
 	Database = DBinstanse{DB: db}
 

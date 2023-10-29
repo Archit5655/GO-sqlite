@@ -20,6 +20,7 @@ func Welcome(c *fiber.Ctx) error {
 
 func main() {
 	database.ConnectDB()
+	
 
 	app := fiber.New()
 
@@ -28,6 +29,9 @@ func main() {
 	app.Get("/api/getuser", routes.GetUsers)
 	app.Post("/api/users",routes.CretaeUser)
 	app.Get("/api/user/:id",routes.Getuser)
+	app.Put("/api/user/:id",routes.UpdateUser)
+	app.Delete("/api/user/:id",routes.DeleteUser)
+
 
 	log.Fatal(app.Listen(":4000"))
 }
