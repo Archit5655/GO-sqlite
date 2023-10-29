@@ -32,6 +32,17 @@ func main() {
 	app.Put("/api/user/:id",routes.UpdateUser)
 	app.Delete("/api/user/:id",routes.DeleteUser)
 
+	// Product routes
+	app.Post("/api/products",routes.CreteProduct)
+	app.Get("/api/products",routes.GetProducts)
+	app.Get("/api/products/:id",routes.GetProduct)
+	app.Put("/api/products/:id",routes.UpdateProduct)
+	app.Delete("/api/products/:id",routes.DeleteProduct)
+
+
+
+
+
 
 	log.Fatal(app.Listen(":4000"))
 }
