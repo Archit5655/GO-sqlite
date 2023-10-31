@@ -1,6 +1,7 @@
 package main
 
 import (
+
 	"fiber/database"
 	"fiber/routes"
 	"log"
@@ -38,6 +39,16 @@ func main() {
 	app.Get("/api/products/:id",routes.GetProduct)
 	app.Put("/api/products/:id",routes.UpdateProduct)
 	app.Delete("/api/products/:id",routes.DeleteProduct)
+	// Oder endpoints
+
+	app.Post("/api/orders",routes.CreateOrder)
+	app.Get("/api/orders",routes.GetOrders)
+	app.Get("/api/orders/:id",routes.GetOrderById)
+	
+
+
+
+
 
 
 
